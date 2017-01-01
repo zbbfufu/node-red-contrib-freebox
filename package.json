@@ -1,0 +1,15 @@
+{
+    "name"         : "node-red-contrib-freebox",
+    "version"      : "0.0.1",
+    "description"  : "A node for node-red to interact with Freebox API",
+    "dependencies": {
+	"node-freeboxos": "0.0.1"
+    },
+    "keywords": [], 
+    "node-red"     : {
+        "nodes": {
+            "config": "config.js",
+            "rrd": "rrd/rrd.js"
+        }
+    }
+}

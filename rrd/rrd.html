@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('freebox-rrd',{
+        category: 'freebox',
+        color: '#a6bbcf',
+        defaults: {
+            config: { value: "", type: "freebox-config" }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"freebox-rrd";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="freebox-rrd">
+    <div class="form-row">
+        <label for="node-input-config"><i class="icon-tag"></i> Freebox</label>
+        <input type="text" id="node-input-config">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="freebox-rrd">
+    <p>A node that call freebox api to get rrd stats (see <a target="_blank" href="http://dev.freebox.fr/sdk/os/rrd/">http://dev.freebox.fr/sdk/os/rrd/</a>)</p>
+</script>

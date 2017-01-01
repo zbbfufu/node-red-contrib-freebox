@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('freebox-config',{
+        category: 'freebox',
+        color: '#a6bbcf',
+        defaults: {
+            host: { value: "mafreebox.freebox.fr", required: false },
+            port: { value: 80, required: false },
+            app_token: { value: "", required: true }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"freebox-config";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="freebox-config">
+    <div class="form-row">
+        <label for="node-input-host"><i class="icon-tag"></i> Host</label>
+        <input type="text" id="node-input-host" placeholder="Freebox hostname or IP">
+    </div>
+    <div class="form-row">
+        <label for="node-input-port"><i class="icon-tag"></i> Port</label>
+        <input type="text" id="node-input-port" placeholder="Freebox port">
+    </div>
+    <div class="form-row">
+        <label for="node-input-app_token"><i class="icon-tag"></i> App token</label>
+        <input type="text" id="node-input-app_token" placeholder="App token">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="freebox-config">
+    <p>A configuration node for freebox</p>
+</script>
